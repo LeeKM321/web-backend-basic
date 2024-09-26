@@ -38,6 +38,11 @@ dependencies {
 	implementation 'jakarta.servlet.jsp.jstl:jakarta.servlet.jsp.jstl-api'
 	implementation 'org.glassfish.web:jakarta.servlet.jsp.jstl'
 
+	// 자바 프로그램과 mysql을 연동해주는 커넥터
+	implementation 'mysql:mysql-connector-java:8.0.33'
+
+
+
 }
 
 tasks.named('test') {
