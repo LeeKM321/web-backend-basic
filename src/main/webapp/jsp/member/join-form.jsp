@@ -7,7 +7,7 @@
     <title>회원가입 form</title>
   </head>
   <body>
-    <form action="/jsp/member/join.jsp" method="post">
+    <form action="/servlet-mvc/member/join" method="post">
       아이디: <input type="text" name="id" /> <br />
       비밀번호: <input type="password" name="pw" /> <br />
       이름: <input type="text" name="username" /> <br />
