@@ -22,8 +22,6 @@
         <th>나이</th>
       </tr>
 
-      for (Member m : list)
-
       <c:forEach var="mem" items="${mList}">
         <tr>
             <td>${mem.id}</td>

@@ -37,7 +37,7 @@ public class MvcMemberJoinServlet extends HttpServlet {
 //        response.sendRedirect("/jsp/member/join-result.jsp");
 
         RequestDispatcher dp
-                = request.getRequestDispatcher("/jsp/member/join-result.jsp");
+                = request.getRequestDispatcher("/WEB-INF/views/member/join-result.jsp");
         dp.forward(request, response);
 
 

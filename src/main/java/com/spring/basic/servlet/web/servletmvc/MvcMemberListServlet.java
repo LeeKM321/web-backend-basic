@@ -25,7 +25,7 @@ public class MvcMemberListServlet extends HttpServlet {
         request.setAttribute("mList", memberList);
 
         RequestDispatcher dp
-                = request.getRequestDispatcher("/jsp/member/members.jsp");
+                = request.getRequestDispatcher("/WEB-INF/views/member/members.jsp");
 
         dp.forward(request, response);
 

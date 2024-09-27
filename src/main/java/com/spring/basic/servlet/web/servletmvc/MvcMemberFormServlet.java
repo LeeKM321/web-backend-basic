@@ -16,7 +16,10 @@ public class MvcMemberFormServlet extends HttpServlet {
                            HttpServletResponse response) throws ServletException, IOException {
 
         System.out.println("mvc form servlet 동작!");
-        response.sendRedirect("/jsp/member/join-form.jsp");
+//        response.sendRedirect("/jsp/member/join-form.jsp");
+
+        request.getRequestDispatcher("/WEB-INF/views/member/join-form.jsp")
+                .forward(request, response);
 
     }
 }
