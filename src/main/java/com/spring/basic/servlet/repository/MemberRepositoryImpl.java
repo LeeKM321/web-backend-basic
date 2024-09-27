@@ -105,8 +105,32 @@ public class MemberRepositoryImpl implements MemberRepository {
             e.printStackTrace();
             return null;
         }
-
     }
+
+    @Override
+    public void delete(String id) {
+        try(Connection conn = DriverManager.getConnection(url, username, password)) {
+            // 커넥터 드라이버 강제 구동 -> 자바 프로그램과 DB 연동
+            Class.forName(driverClassName);
+
+            // 실행할 SQL을 작성 (문자열)
+            String sql = "DELETE FROM tbl_members WHERE id=?";
+
+            // SQL을 실행할 객체를 생성.
+            PreparedStatement pstmt = conn.prepareStatement(sql);
+
+            pstmt.setString(1, id);
+
+            // 실행 명령
+            // INSERT, UPDATE, DELETE는 실행 명령 메서드가 똑같습니다.
+            pstmt.executeUpdate(); // 성공 시 실행 쿼리문의 개수, 실패 시 0
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+
 }
 
 
