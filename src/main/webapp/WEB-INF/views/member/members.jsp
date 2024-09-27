@@ -43,7 +43,7 @@
 
             if (confirm('정말 삭제하시겠습니까?')) {
                 const delTarget = e.target.dataset.id;
-                location.href='/front-controller/v3/member/delete?id=' + delTarget;
+                location.href='/front-controller/v4/member/delete?id=' + delTarget;
             }
         });
     </script>
